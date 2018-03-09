@@ -37,6 +37,6 @@ Sellers can register, and login; once logged in they can add, edit & remove choc
 
 Customers can add chocolates they desire directly from the homepage, to their cart; clicking the cart, then allows them to checkout and complete the transaction, and also decrement the chocolate stock count, accordingly.
 
-I didn't have the time to complete image upload for each chocolate added by the seller.
+I didn't have the time to complete image upload for each chocolate added by the seller, or general search for products.
 
 I have used HTML / CSS (Bootstrap) / Handlebars / Webpack / NodeJS / Express & MySQL.
