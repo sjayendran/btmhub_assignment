@@ -1,0 +1,21 @@
+{{> header }}
+<main role="main" class="container">
+    <div class="jumbotron">
+    <h1>Welcome to the Chocolate Shop!</h1>
+        <p class="lead">Customers can search and place orders, while the Sellers can manage the products and orders. Chocolates come from different countries, brands, cocoa content, flavors, and weight.</p>
+    <!--<a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>-->
+    </div>
+    {{#if chocolates}}
+        <i>Here are the chocolates that are currently available for sale:</i>
+        <ul>
+            {{#each chocolates}}
+                <li>
+                    <b>{{brand}} - {{name}} ({{origin_country}})</b> - Cocoa Content: {{cocoa_content}} - Alcohol Content: {{alcohol_content}} / Rs {{unit_price}} for {{weight}} grams - <b>{{stock_left}}</b> units left [<a href="/cart/add/{{id}}/{{unit_price}}/{{brand}}/{{name}}/home">Add to cart</a>]
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <i>No chocolates available just yet.</i>
+    {{/if}}
+</main>
+

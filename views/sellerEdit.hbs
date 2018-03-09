@@ -1,0 +1,55 @@
+{{> header }}
+
+<main role="main" class="container">
+    <br><br><br>
+    <div class="starter-template">
+        <h1>{{title}}</h1>
+    </div>
+
+    {{#if errors}}
+        {{#each errors}}
+            <div class="alert alert-danger" role="alert">
+                {{this.msg}}
+            </div>
+        {{/each}}
+    {{/if}}
+    
+    {{#with selectedChocolate}}
+        <form method="POST" action="/seller/edit/{{id}}">
+            <div class="form-group">
+                <label for="chocolateName">Name</label>
+                <input type="text" class="form-control" name="chocolateName" placeholder="Chocolate Name" value="{{name}}">
+            </div>
+            <div class="form-group">
+                <label for="chocolateBrand">Brand</label>
+                <input type="text" class="form-control" name="chocolateBrand" placeholder="Chocolate Brand" value="{{brand}}">
+            </div>
+            <div class="form-group">
+                <label for="chocolateCountry">Country of Origin</label>
+                <input type="text" class="form-control" name="chocolateCountry" placeholder="Country of Origin" value="{{origin_country}}">
+            </div>
+            <div class="form-group">
+                <label for="cocoaContent">Cocoa Content</label>
+                <input type="text" class="form-control" name="cocoaContent" placeholder="Cocoa Content" value="{{cocoa_content}}">
+            </div>
+            <div class="form-group">
+                <label for="alcoholContent">Alcohol Content</label>
+                <input type="text" class="form-control" name="alcoholContent" placeholder="Alcohol Content" value="{{alcohol_content}}">
+            </div>
+            <div class="form-group">
+                <label for="unitPrice">Unit Price</label>
+                <input type="text" class="form-control" name="unitPrice" placeholder="Unit Price" value="{{unit_price}}">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="text" class="form-control" name="weight" placeholder="Weight" value="{{weight}}">
+            </div>
+            <div class="form-group">
+                <label for="stockLeft">Stock Left</label>
+                <input type="text" class="form-control" name="stockLeft" placeholder="Stock Left" value="{{stock_left}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update this chocolate!</button>
+        </form>
+    {{/with}}
+    
+</main>

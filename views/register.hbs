@@ -1,0 +1,50 @@
+{{> header }}
+<div class="container">
+    <h1>{{title}}</h1>
+
+    {{#if errors}}
+        {{#each errors}}
+            <div class="alert alert-danger" role="alert">
+                {{this.msg}}
+            </div>
+        {{/each}}
+    {{/if}}
+
+    <form method="POST" action="/register">
+    <div class="form-group">
+        <label for="sellerName">Name</label>
+        <input type="text" class="form-control" name="sellerName" placeholder="Your Name">
+    </div>
+    <div class="form-group">
+        <label for="sellerPassportNo">Passport Number</label>
+        <input type="text" class="form-control" name="sellerPassportNo" placeholder="Your Passport #">
+    </div>
+    <div class="form-group">
+        <label for="sellerCountry">Country</label>
+        <input type="text" class="form-control" name="sellerCountry" placeholder="Your Country">
+    </div>
+    <div class="form-group">
+        <label for="sellerEmail">Email</label>
+        <input type="email" class="form-control" name="sellerEmail" placeholder="Email address">
+    </div>
+    <div class="form-group">
+        <label for="sellerContactNumber">Contact Number</label>
+        <input type="text" class="form-control" name="sellerContactNumber" placeholder="Contact Number">
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Choose a username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="passwordMatch">Re-enter Password</label>
+        <input type="password" class="form-control" name="passwordMatch" placeholder="Re-enter Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+{{> footer-end }}
